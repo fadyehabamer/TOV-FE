@@ -9,12 +9,12 @@
     once: true
   });
 
-  $(window).on('load', function () {
+  // $(window).on('load', function () {
 
-    // $('.preloader').delay(2000).fadeOut('slow');
-    $('.preloader').fadeOut('slow');
-
-  })
+  //   $('.preloader').fadeOut('slow');
+    
+  // })
+  $('.preloader').delay(2000).fadeOut('slow');
 
   $(window).on('scroll', function () {
     //.Scroll to top show/hide
