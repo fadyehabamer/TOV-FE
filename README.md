@@ -8,7 +8,7 @@
 
 - [X] index 
 - [X] about
-- [X]team
+- [X] team
 - [X] faq
 - [X] sign up
 - [X] login
