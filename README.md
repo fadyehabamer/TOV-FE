@@ -2,8 +2,6 @@
 
 > '🧑🏽‍🎓 IT Graduation Project 2022'
 
->  حسبي الله و نعم الوكيل
-
 ## Tasks List
 
 - [X] index 
