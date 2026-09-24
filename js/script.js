@@ -5,8 +5,12 @@
   // ----------------------------
   // AOS
   // ----------------------------
+  // people who ask the OS to reduce motion get no scroll animations, auto-advancing sliders or animated scrolling
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   AOS.init({
-    once: true
+    once: true,
+    disable: reduceMotion
   });
 
   // $(window).on('load', function () {
@@ -30,7 +34,7 @@
   $('.scroll-top-to').on('click', function () {
     $('body,html').animate({
       scrollTop: 0
-    }, 500);
+    }, reduceMotion ? 0 : 500);
     return false;
   });
 
@@ -52,7 +56,7 @@
       slidesToShow: 2,
       infinite: true,
       arrows: false,
-      autoplay: true,
+      autoplay: !reduceMotion,
       autoplaySpeed: 2000,
       dots: true,
       responsive: [
@@ -74,7 +78,7 @@
       slidesToShow: 1,
       infinite: true,
       arrows: false,
-      autoplay: true,
+      autoplay: !reduceMotion,
       autoplaySpeed: 2000,
       dots: true
     });
@@ -87,7 +91,7 @@
       slidesToShow: 1,
       infinite: true,
       arrows: false,
-      autoplay: true,
+      autoplay: !reduceMotion,
       autoplaySpeed: 2000,
       dots: true
     });
