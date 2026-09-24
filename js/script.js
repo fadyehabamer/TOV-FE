@@ -37,6 +37,12 @@
     }, reduceMotion ? 0 : 500);
     return false;
   });
+  $('.scroll-top-to').on('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      $(this).trigger('click');
+    }
+  });
 
   $(document).ready(function () {
 
